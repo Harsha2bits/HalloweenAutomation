@@ -52,3 +52,27 @@ while play:
         continue
     else:
         play = False
+
+
+
+VIDEO_PATH="/path/to/video.mp4"
+
+def get_end_callback(mediaplayer):
+    def end_callback(event):
+        print("End of playing reached")
+        mediaplayer.stop()
+        mediaplayer.get_media().release()
+        mediaplayer.release()
+        mediaplayer.get_instance().release()
+    return end_callback
+
+def play():
+    vlc_instance = vlc.Instance(["--no-xlib"])
+    media_player = vlc.MediaPlayer(vlc_instance, VIDEO_PATH)
+    media_player.set_xwindow(window.xid)
+    media_player.play()
+
+    event_manager = media_player.event_manager()
+    event_manager.event_attach(vlc.EventType.MediaPlayerEndReached, get_end_callback(media_player))
+
+play()
