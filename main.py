@@ -1,6 +1,7 @@
 from paho.mqtt import client as mqtt_client
 import time
 import vlc
+import os
 
 # VLC video path
 path_folder = "assets/"
