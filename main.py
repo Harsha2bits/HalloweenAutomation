@@ -67,6 +67,7 @@ def subscribe(client: mqtt_client):
             play_video()  #Function to play video
             print("Video played")
             publish_complete(client)
+            os.system('clear')
 
     client.subscribe(topicsub)
     client.on_message = on_message
