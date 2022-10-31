@@ -10,6 +10,7 @@ The setup is pretty straight forward
 1. Clone the repository into a folder.
 2. Enable to run the program at startup
 3. Enable bluetooth audio at startup
+4. Install packages
 
 ### Enable to run the program at startup
 1. sudo nano /etc/xdg/autostart/display.desktop
