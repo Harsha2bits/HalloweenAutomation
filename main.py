@@ -90,6 +90,7 @@ def play_video():
             continue
         else:
             play = False
+            return
 
 
 def run():
