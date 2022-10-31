@@ -90,6 +90,7 @@ def play_video():
             continue
         else:
             play = False
+            os.system('clear')
             media_player.stop()
             return
 
