@@ -11,8 +11,12 @@ The setup is pretty straight forward
 2. Enable to run the program at startup
 3. Enable bluetooth audio at startup
 4. Install packages
+   1. python-vlc
+   2. paho.mqtt
 
 ### Enable to run the program at startup
+source:https://www.makeuseof.com/how-to-run-a-raspberry-pi-program-script-at-startup/
+
 1. sudo nano /etc/xdg/autostart/display.desktop
 2. In the desktop add the following code
 ``` 
